@@ -1,14 +1,29 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import 'font-awesome/css/font-awesome.min.css';
+import { createStore, applyMiddleware,compose } from 'redux';
+import appReducers from './reducers/index';
+import {Provider} from 'react-redux';
+import thunk from 'redux-thunk';
+
+
+const store = createStore(
+  appReducers,
+  compose(
+  applyMiddleware(thunk)
+  )
+)
+
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
+<Provider store ={store}>
+  <React.Fragment>
+  <App />
+</React.Fragment>
+</Provider>,
+document.getElementById('root')
 );
 
 // If you want your app to work offline and load faster, you can change

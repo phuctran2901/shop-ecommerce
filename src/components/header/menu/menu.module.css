@@ -1,0 +1,242 @@
+
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+}
+
+.nav_main {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.nav_main_item {
+    list-style: none;
+    padding: 0 15px ;
+    position: relative;
+}
+.nav_main_item a::before {
+    content: '';
+    width: 0%;
+    height: 2px;
+    background-color: white;
+    position: absolute;
+    top: 50%;
+}
+.nav_main_item:hover a::before  {
+    transition: 0.3s;
+    width: 80%;
+}
+.wrapper_cart {
+    display: none;
+}
+
+.nav_mini_item:hover .wrapper_cart {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+}
+.nav_main_item a {
+    color: white;
+    font-size: 20px;
+    font-weight: 1000;
+    text-decoration: none;
+}
+.active {
+    background-color: rgba(255, 255, 255, 0.4);
+}
+.nav_mini {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    width: 20%;
+}
+.nav_mini_item {
+    position: relative;
+    margin: 0 10px;
+    list-style: none;
+    color: white;
+    font-size: 16px;
+    font-weight: 1000;
+    cursor: pointer;
+}
+.nav_mini_item:last-child {
+    padding-right: 0;
+}
+.nav_mini_icon {
+    font-size: 32px;
+}
+.nav_mini_item:hover {
+    color: #dc3535de;
+}
+.nav_mini_item:hover .amount_cart {
+    color: white;
+    opacity: 1;
+}
+.nav_mini_item::before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    height: 10px;
+    background-color: transparent;
+}
+.amount_cart {
+    position: absolute;
+    top: -20%;
+    right: -15%;
+    font-size: 12px;
+    background-color: #EF524A;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    border-radius: 50%;
+}
+.nav_mini_item:hover .signout {
+    display: block;
+}
+.signout {
+    position: absolute;
+    top: 120%;
+    right: 0;
+    background-color: white;
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+    padding: 5px 5px;
+    display: none;
+    min-width: 100%;
+    z-index: 2;
+}
+.logo_moblie {
+    width: 60px;
+    display: none;
+    height: 60px;
+}
+.icon_close {
+    position: absolute;
+    top: 10%;
+    right: 5%;
+    width: 50px;
+    height: 50px;
+    display: none;
+}
+.signout::before {
+    content: '';
+    position: absolute;
+    top: -18px;
+    right: 5px;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid white;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent
+}
+.hide_on_pc {
+    display: none;
+}
+.on_animated {
+    animation: onAnimated forwards 0.5s;
+}
+.user_name {
+    width: 120px;
+    overflow: hidden; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@media (max-width : 768px) {
+    .hide_on_moblie {
+        display: none;
+    }
+    .show_on_moblie {
+        display: block;
+    }
+    .nav_main {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        right: -100%;
+        z-index: 10;
+        background-color: #FFF;
+        display: block;
+        padding: 100px 40px;
+        overflow-y: auto;
+    }
+    .nav_main_item {
+        padding: 20px 5px;
+        border-bottom: 1px solid #E6E6E6;
+        display: block;
+    }
+    .nav_main_item > span {
+        font-size: 30px;
+        color: #737F8D;
+    }
+    .nav_main_item > a {
+        font-size: 30px;
+        display: block;
+        color: #737F8D;
+    }
+    .wrapper_icon_bars {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 60px;
+        height: 60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #EF524A;
+        cursor: pointer;
+    }
+    .navigation {
+        width: 80%;
+        display: flex;
+        padding: 0;
+        justify-content: space-between;
+    }
+    .nav_mini {
+        display: flex;
+        padding-right: 85px;
+    }
+    .nav_mini_item {
+        font-size: 14px;
+    }
+    .nav_mini_icon {
+        width: 30px;
+        height: 30px;
+    }
+    .user_name {
+        overflow: hidden;
+    }
+    .nav_mini_item:hover .wrapper_cart {
+        display: none;
+    }
+    .nav_mini_item:hover .signout {
+        display: none;
+    }
+    .flex {
+        display: block;
+    }
+}
+
+@keyframes onAnimated {
+    0% {
+        right: -100%;
+        opacity: 0;
+    }
+    100% {
+        right: 0;
+        left: 0;
+        opacity: 1;
+    }
+}

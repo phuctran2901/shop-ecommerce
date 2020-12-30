@@ -1,0 +1,57 @@
+.footer {
+    background-color: #0E243C;
+    padding: 50px;
+}
+.list_footer {
+    padding: 0;
+    margin: 0;
+}
+.list_footer h4 {
+    color: #40BBFF;
+    font-weight: 400;
+    font-size: 18px;
+}
+.item_footer {
+    list-style: none;
+    padding: 2px 0;
+    color: white;
+    font-size: 16px;
+    font-weight: 400;
+}
+.link_footer {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    transition: 0.3s;
+    list-style: none;
+    font-weight: 400;
+}
+.link_footer:hover {
+    text-decoration: none;
+    color: green;
+    opacity: 0.7;
+    transition: 0.3s;
+}
+.input {
+    width: 100%;
+    height: 35px;
+    margin-top: 10px;
+    outline: none;
+    padding: 10px 12px 10px 5px;
+    border: none;
+    border-radius: 2%;
+}
+.copy {
+    text-align: center;
+    color: #FFFF;
+    font-style: italic;
+}
+@media (max-width : 1024px) {
+    .footer {
+        padding: 20px 5px;
+    }
+    .list_footer {
+        text-align: center;
+        padding-bottom: 10px
+    }
+};

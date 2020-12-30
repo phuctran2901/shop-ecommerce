@@ -1,0 +1,57 @@
+.total_sale {
+    position: relative;
+    padding-top: 4em;
+    padding-bottom: 4rem;
+    background-color: #ec544e;
+    background-image: url(https://the7.io/shop/wp-content/uploads/sites/7/2014/09/patt-sale.png);
+    background-position: 0 0;
+    background-repeat: repeat-x;
+    -webkit-animation: animatedBackground 50s linear infinite alternate;
+    animation: animatedBackground 50s linear infinite alternate;
+    animation-duration: 25s;
+    animation-timing-function: linear;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-fill-mode: none;
+    animation-play-state: running;
+    animation-name: animatedBackground;
+}
+@keyframes animatedBackground {
+    0% {
+        background-position: left;
+    }
+    100% {
+        background-position: right;
+    }
+}
+.total_sale_content {
+    font-size: 2.5rem;
+    font-weight: 600;
+    text-align: center;
+    color: #fff;
+}
+.total_btn {
+    padding: 10px 12px;
+    display: flex;
+    align-items: center;
+    border: 3px solid #fff;
+    width: 100%;
+    transition: all .3s;
+}
+.total_btn .btn {
+    text-decoration: none;
+    font-size: 1rem;
+    text-align: center;
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: 600;
+}
+.btn_block {
+    display: block;
+    width: 100%;
+}
+
+@media (max-width : 768px) {
+
+};
